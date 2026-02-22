@@ -6,14 +6,22 @@ Markdown ベースのプレゼンテーションツール比較。
 | ------------ | --------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | 開発体験     | シンプル、軽量、最小限のセットアップ                      | 高機能; Node.js/Vue の知識が必要                                                |
 | VSCode 連携  | [Marp for VS Code][marp-vscode]: プレビュー、エクスポート | [Slidev for VS Code][slidev-vscode]: プレビュー、スライド操作、コードスニペット |
-| 出力形式     | [HTML, PDF, PPTX][marp-export]（単一ファイル）            | [PDF, PNG, SPA][slidev-export]                                                  |
+| 出力形式     | [HTML, PDF, PPTX][marp-export]                            | [PDF, PNG, SPA][slidev-export]                                                  |
 | ユースケース | ドキュメント、配布資料、PDF 主体のスライド                | 開発者向けトーク、インタラクティブデモ、ライブコーディング                      |
 
 ## For Developer
 
+### Installation
+
+[Docker](https://orbstack.dev/download) & [Taskfile](https://taskfile.dev/docs/installation#homebrew)
+
+### How2Run
+
 ```sh
 bun i && bun run dev
 ```
+
+### Structure
 
 | route            | _Next.js does_ | artifact                                                      | _NPM does_ | source code |
 | ---------------- | -------------- | ------------------------------------------------------------- | ---------- | ----------- |
