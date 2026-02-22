@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "demo": "npm-run-all slidev:build marp:build next:dev",
+    "next:dev": "cd next && bun i && SLIDES_DIR=\"$(git rev-parse --show-toplevel)/.out\" bun run dev",
+    "slidev:build": "cd slidev && bun i && DIR=\"Slidev $(echo -n 'https://example.com/slidev' | base64 | tr '+/' '-_' | tr -d '=')\" && bunx slidev build --base \"/slides/$(echo $DIR | sed 's/ /%20/g')/\" --out \"../.out/$DIR\"",
+    "marp:build": "cd marp && DIR=\"Marp $(echo -n 'https://example.com/marp' | base64 | tr '+/' '-_' | tr -d '=')\" && mkdir -p \"../.out/$DIR\" && bunx @marp-team/marp-cli slides.md -o \"../.out/$DIR/index.html\""
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
