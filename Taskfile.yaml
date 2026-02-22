@@ -1,0 +1,9 @@
+version: "3"
+
+tasks:
+  run: { deps: [ build ], cmd: docker run -p 3000:3000 portal }
+  build:
+    cmd: "docker build --build-arg GIT_REMOTE={{.GIT_REMOTE}} --build-arg GIT_BRANCH={{.GIT_BRANCH}} -t portal ."
+    vars:
+      GIT_REMOTE: { sh: git remote get-url origin | sed 's/\.git$//' }
+      GIT_BRANCH: { sh: git branch --show-current }
