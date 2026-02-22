@@ -1,5 +1,6 @@
 {
 	"private": true,
+	"workspaces": ["next", "slidev", "marp"],
 	"scripts": {
 		"dev": "npm-run-all marp:build slidev:build next:dev",
 		"next:dev": "cd next && npm i && SLIDES_DIR=\"$(git rev-parse --show-toplevel)/.out\" npm run dev",

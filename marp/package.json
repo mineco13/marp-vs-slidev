@@ -1,4 +1,5 @@
 {
+	"name": "marp",
 	"private": true,
 	"scripts": {
 		"build": "OUT=$(sh ../gen-dirname.sh marp) && mkdir -p \"../.out/$OUT\" && npx @marp-team/marp-cli slides.md -o \"../.out/$OUT/index.html\""

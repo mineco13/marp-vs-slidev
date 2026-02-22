@@ -1,4 +1,5 @@
 {
+	"name": "slidev",
 	"type": "module",
 	"private": true,
 	"scripts": {
