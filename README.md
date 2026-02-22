@@ -12,7 +12,7 @@ Markdown ベースのプレゼンテーションツール比較。
 ## For Developer
 
 ```sh
-npm i && npm run dev
+bun i && bun run dev
 ```
 
 | route            | _Next.js does_ | artifact                                                      | _NPM does_ | source code |
