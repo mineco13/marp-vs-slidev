@@ -2,7 +2,7 @@
 	"name": "marp",
 	"private": true,
 	"scripts": {
-		"build": "OUT=$(sh ../gen-dirname.sh marp) && mkdir -p \"../.out/$OUT\" && npx @marp-team/marp-cli slides.md -o \"../.out/$OUT/index.html\""
+		"build": "OUT=$(sh ../gen-dirname.sh marp) && mkdir -p \"../.out/$OUT\" && bunx @marp-team/marp-cli slides.md -o \"../.out/$OUT/index.html\""
 	},
 	"devDependencies": {
 		"@marp-team/marp-cli": "^4.2.3"
